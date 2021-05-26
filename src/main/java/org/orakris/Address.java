@@ -68,17 +68,4 @@ public class Address {
     public void setPincode(int pincode) {
         this.pincode = pincode;
     }
-
-    @Override
-    public String toString() {
-        return "Address{" +
-                "id=" + id +
-                ", addressline='" + addressline + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", country='" + country + '\'' +
-                ", pincode=" + pincode +
-                ", student=" + student +
-                '}';
-    }
 }
