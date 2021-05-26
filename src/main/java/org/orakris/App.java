@@ -23,6 +23,23 @@ public class App
         Session session = sf.openSession();
 
         Transaction transaction = session.beginTransaction();
+
+        // Store data
+        Student student = new Student();
+        student.setName("abcd");
+
+        Address address = new Address();
+        address.setAddressline("line1");
+        address.setCity("hyderabad");
+        address.setCountry("india");
+        address.setState("hyderabad");
+        address.setPincode(456);
+
+        student.setAddress(address);
+        address.setStudent(student);
+
+        session.persist(student);
+
         transaction.commit();
         session.close();
         System.out.println("success");
